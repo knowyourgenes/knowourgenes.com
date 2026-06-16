@@ -148,6 +148,33 @@ export type SeedGene = {
 };
 
 export const genes: SeedGene[] = [
+  // ===== Generic explainer (mapped into the gene model) =====
+  {
+    slug: "what-is-dna-testing",
+    symbol: "DNA Testing",
+    fullName: "What Is DNA Testing and How Does It Actually Work?",
+    nickname: "DNA testing explained",
+    categorySlug: "inherited-risk",
+    indexLine:
+      "How a saliva or swab sample becomes a personalised genetic report",
+    oneLine:
+      "DNA testing analyses your unique genetic code to reveal information about your ancestry, health risks, traits, and how your body responds to food, medication, and exercise. A small saliva or cheek-swab sample is processed in a lab, where specific genetic markers are read and compared against scientific databases to generate a personalised report.",
+    whatItDoes:
+      "DNA testing has moved from research labs into everyday life. Today you can understand your genetic makeup from a simple sample collected at home, so it helps to know what is really happening between the swab and the report. DNA, or deoxyribonucleic acid, is the molecule that carries the instructions for building and running your body. It is organised into roughly 20,000 genes, and small variations in these genes make every person unique. These variations influence everything from eye colour to how efficiently you metabolise caffeine or your inherited risk for certain conditions. Reading these variations is what makes personalised genetic insight possible.",
+    variants:
+      "The journey from sample to report follows four clear stages. Sample collection: you provide saliva in a tube or rub a swab inside your cheek; these cells contain your complete DNA. Extraction: in the lab, DNA is separated from the rest of the cell so it can be analysed cleanly. Analysis: the lab examines specific points in your genome called SNPs (single nucleotide polymorphisms), the spots where human DNA most commonly varies. Interpretation: your raw genetic data is compared against peer-reviewed research and reference databases to produce an easy-to-read report. The whole process typically takes two to four weeks depending on the test type.",
+    ifYouCarry:
+      "Modern DNA tests cover a wide range of insights. Ancestry and heritage: where your ancestors came from and your ethnic composition. Health predispositions: inherited risk for conditions influenced by genetics. Nutrition and fitness: how your body processes carbohydrates, fats, vitamins, and how it responds to different types of exercise. Traits: lactose tolerance, caffeine sensitivity, sleep patterns, and more. Carrier status: whether you carry genes that could be passed to children. DNA testing can benefit almost anyone curious about their body, but it is especially useful if you want a proactive view of inherited health risks, are planning a family and want to understand carrier status, want personalised nutrition or fitness guidance, or are curious about your ancestry and roots.",
+    indiaRelevance:
+      "Reputable DNA tests are processed in accredited laboratories using validated methods. The reliability of your results depends on the quality of the lab, the depth of the genetic markers analysed, and the strength of the scientific references behind the report. Always choose a provider that works with certified labs and cites credible research. Data privacy is one of the most common concerns, and a fair one. Trustworthy providers protect your information through encryption, give you control over how your data is used, and never share identifiable genetic information without explicit consent. Before testing, read the privacy policy and confirm you can request deletion of your data.",
+    honestCaveat:
+      "It is important to understand that genetics shows predisposition, not destiny. Your lifestyle, environment, and choices still play a major role in how your genes express themselves. Frequently asked questions. How long does a DNA test take? Most results are ready within two to four weeks after the lab receives your sample. Does a DNA test hurt? No. Sample collection is painless and uses either saliva or a gentle cheek swab. Can a DNA test diagnose a disease? No. It reveals genetic predisposition and risk, not a clinical diagnosis. Always consult a doctor for medical decisions. Do I need to fast or prepare before a DNA test? For most saliva tests, you should avoid eating, drinking, or smoking for about 30 minutes before collecting your sample. Is one DNA sample enough for life? Your DNA does not change, so a single high-quality sample can be reanalysed as science advances.",
+    related: ["MTHFR", "BRCA1 / BRCA2", "FTO"],
+    featured: true,
+    featuredLabel: "DNA testing explained",
+    order: 0,
+  },
+
   // ===== Full model entries =====
   {
     slug: "fto",

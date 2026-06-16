@@ -8,7 +8,7 @@ const base = {
   strokeLinejoin: "round" as const,
 };
 
-// Double-helix mark — strands in white, rungs in soft gold.
+// Double-helix mark - strands in white, rungs in soft gold.
 export function LogoMark({ size = 22 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden>

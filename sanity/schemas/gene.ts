@@ -90,7 +90,7 @@ export const gene = defineType({
     }),
     defineField({
       name: "honestCaveat",
-      title: "The honest caveat (load-bearing — keep it)",
+      title: "The honest caveat (load-bearing - keep it)",
       type: "text",
       rows: 4,
       group: "entry",

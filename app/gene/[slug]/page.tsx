@@ -29,7 +29,7 @@ export async function generateMetadata({
 
   const def = gene.oneLine || gene.indexLine;
   const title = gene.nickname
-    ? `${gene.symbol} — ${gene.nickname}`
+    ? `${gene.symbol} - ${gene.nickname}`
     : `${gene.symbol} gene`;
   return {
     title,
