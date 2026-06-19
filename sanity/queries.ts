@@ -11,7 +11,8 @@ const geneCard = `{
   featuredLabel,
   order,
   "categoryTitle": category->title,
-  "categorySlug": category->slug.current
+  "categorySlug": category->slug.current,
+  "publishedAt": coalesce(publishedAt, _updatedAt)
 }`;
 
 export const homepageQuery = groq`*[_type == "homepage"] | order(_updatedAt desc)[0] {
@@ -56,6 +57,11 @@ export const geneBySlugQuery = groq`*[_type == "gene" && slug.current == $slug][
 }`;
 
 export const categorySlugsQuery = groq`*[_type == "category" && defined(slug.current)][].slug.current`;
+
+export const categorySitemapQuery = groq`*[_type == "category" && defined(slug.current)]{
+  "slug": slug.current,
+  "publishedAt": coalesce(publishedAt, _updatedAt)
+}`;
 
 export const categoryBySlugQuery = groq`*[_type == "category" && slug.current == $slug][0] {
   "slug": slug.current,

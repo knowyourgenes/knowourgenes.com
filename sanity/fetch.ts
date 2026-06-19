@@ -8,6 +8,7 @@ import {
   geneSlugsQuery,
   geneBySlugQuery,
   categorySlugsQuery,
+  categorySitemapQuery,
   categoryBySlugQuery,
 } from "./queries";
 
@@ -25,6 +26,12 @@ export type GeneCard = {
   order?: number;
   categoryTitle?: string;
   categorySlug?: string;
+  publishedAt?: string;
+};
+
+export type SitemapItem = {
+  slug: string;
+  publishedAt?: string;
 };
 
 export type RelatedGene = {
@@ -157,6 +164,12 @@ export async function getCategorySlugs(): Promise<string[]> {
   const client = getClient();
   if (!isSanityConfigured || !client) return [];
   return (await client.fetch<string[]>(categorySlugsQuery)) ?? [];
+}
+
+export async function getCategorySitemapItems(): Promise<SitemapItem[]> {
+  const client = getClient();
+  if (!isSanityConfigured || !client) return [];
+  return (await client.fetch<SitemapItem[]>(categorySitemapQuery)) ?? [];
 }
 
 export async function getCategoryBySlug(

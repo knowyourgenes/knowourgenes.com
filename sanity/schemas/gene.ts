@@ -125,6 +125,13 @@ export const gene = defineType({
       initialValue: 100,
       group: "meta",
     }),
+    defineField({
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
+      initialValue: () => new Date().toISOString(),
+      group: "meta",
+    }),
   ],
   orderings: [
     {
